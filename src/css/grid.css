@@ -3,22 +3,22 @@
 ======================================================== */
 .clearfix:before,
 .clearfix:after,
-.gridcol:before,
-.gridcol:after {
+.grid:before,
+.grid:after {
     content: "";
     display: table;
 }
 .clearfix:after,
-.gridcol:after {
+.grid:after {
     clear: both;
 }
-.clearfix, .gridcol {
+.clearfix, .grid {
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
 }
-.gridcol {
+.grid {
 
 }
-.gridcol [class*="col-"] {
+.grid [class*="col-"] {
 	padding: 0 15px;
 	float: left;
 	clear: none;
@@ -27,125 +27,123 @@
 	box-sizing: border-box;
 	min-height: 1px;/*keeps it from collapsing fully. allows other columns to float alongside.*/
 }
-.gridcol.nopad > [class*="col-"] {
+.grid.nopad > [class*="col-"] {
 	padding: 0;
 }
-.gridcol [class*="col-"]:last-child {
+.grid [class*="col-"]:last-child {
 	float: right;/*so edges always line up.*/
 }
-.gridcol.edges {
+.grid.edges {
 	margin-left: -15px;
 	margin-right: -15px;
 	box-sizing: content-box;
 }
-.gridcol .col-1 {
+.grid .col-1 {
 	width: 4.1666%;
 }
-.gridcol .col-2 {
+.grid .col-2 {
 	width: 8.3%;
 }
-.gridcol .col-3 {
+.grid .col-3 {
 	width: 12.5%;
 }
-.gridcol .col-4 {
+.grid .col-4 {
 	width: 16.666%;
 }
-.gridcol .col-5 {
+.grid .col-5 {
 	width: 20.8333%;
 }
-.gridcol .col-6 {
+.grid .col-6 {
 	width: 25%;
 }
-.gridcol .col-7 {
+.grid .col-7 {
 	width: 29.1666%;
 }
-.gridcol .col-8 {
+.grid .col-8 {
 	width: 33.333%;
 }
-.gridcol .col-9 {
+.grid .col-9 {
 	width: 37.5%;
 }
-.gridcol .col-10 {
+.grid .col-10 {
 	width: 41.666%;
 }
-.gridcol .col-11 {
+.grid .col-11 {
 	width: 45.8333%;
 }
-.gridcol .col-12 {
+.grid .col-12 {
 	width: 50%;
 }
-.gridcol .col-13 {
+.grid .col-13 {
 	width: 54.1666%;
 }
-.gridcol .col-14 {
+.grid .col-14 {
 	width: 58.333%;
 }
-.gridcol .col-15 {
+.grid .col-15 {
 	width: 62.5%;
 }
-.gridcol .col-16 {
+.grid .col-16 {
 	width: 66.666%;
 }
-.gridcol .col-17 {
+.grid .col-17 {
 	width: 70.8333%;
 }
-.gridcol .col-18 {
+.grid .col-18 {
 	width: 75%;
 }
-.gridcol .col-19 {
+.grid .col-19 {
 	width: 79.1666%;
 }
-.gridcol .col-20 {
+.grid .col-20 {
 	width: 83.333%;
-	padding: 0 .5%;
 }
-.gridcol .col-21 {
+.grid .col-21 {
 	width: 87.5%;
 }
-.gridcol .col-22 {
+.grid .col-22 {
 	width: 91.666%;
-	padding: 0 .5%;
 }
-.gridcol .col-23 {
+.grid .col-23 {
 	width: 95.8333%;
 }
-.gridcol .col-24 {
+.grid .col-24 {
 	width: 100%;
 }
 
-#container .show-900, #container .show-1000, #container .show-800, #container .show-700, #container .show-600, #container .show-500, #container .show-400 {
+.show-900, .show-1000, .show-800, .show-700, .show-600, .show-500, .show-400 {
 	display: none;
 }
 @media screen and (max-width: 1100px) {
-	.gridcol.break-1100.edges {
+	.grid.break-1100.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.gridcol.break-1100 [class*="col-"]{
+	.grid.break-1100 [class*="col-"]{
 		float: none;
 		clear: both;
 		width: auto;
 		padding: 1%;
 	}
-	#container .hide-1100 {
+	.hide-1100 {
 		display: none;
 	}
-	#container .show-1100 {
+	.show-1100 {
 		display: block;
 	}
 }
 @media screen and (max-width: 1000px) {
-	#container .show-1000 {
+	.show-1000 {
 		display: block;
 	}
-	#container .hide-1000 {
+	.hide-1000 {
 		display: none;
 	}
-	.gridcol.break-1000.edges {
+	.grid.break-1000.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	#container .gridcol.break-1000 [class*="col-"]{
+	.grid.break-1000 [class*="col-"] {
 		float: none;
 		clear: both;
 		width: auto;
@@ -153,17 +151,17 @@
 	}
 }
 @media screen and (max-width: 900px) {
-	#container .show-900 {
+	.show-900 {
 		display: block;
 	}
-	#container .hide-900 {
+	.hide-900 {
 		display: none;
 	}
-	.gridcol.break-900.edges {
+	.grid.break-900.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	#container .gridcol.break-900 [class*="col-"]{
+	.grid.break-900 [class*="col-"]{
 		float: none;
 		clear: both;
 		width: auto;
@@ -171,109 +169,108 @@
 	}
 }
 @media screen and (max-width: 800px) {
-	#container .hide-800 {
+	.hide-800 {
 		display: none;
 	}
-	#container .show-800 {
+	.show-800 {
 		display: block;
 	}
-	.gridcol.break-800.edges {
+	.grid.break-800.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	#container .gridcol.break-800 [class*="col-"]{
+	.grid.break-800 [class*="col-"]{
 		float: none;
 		clear: both;
 		width: auto;
 		padding: 1%;
 	}
-	.gridcol .col-md-1 {
+	.grid .col-md-1 {
 		width: 4.1666%;
 	}
-	.gridcol .col-md-2 {
+	.grid .col-md-2 {
 		width: 8.3%;
 	}
-	.gridcol .col-md-3 {
+	.grid .col-md-3 {
 		width: 12.5%;
 	}
-	.gridcol .col-md-4 {
+	.grid .col-md-4 {
 		width: 16.666%;
 	}
-	.gridcol .col-md-5 {
+	.grid .col-md-5 {
 		width: 20.8333%;
 	}
-	.gridcol .col-md-6 {
+	.grid .col-md-6 {
 		width: 25%;
 	}
-	.gridcol .col-md-7 {
+	.grid .col-md-7 {
 		width: 29.1666%;
 	}
-	.gridcol .col-md-8 {
+	.grid .col-md-8 {
 		width: 33.333%;
 	}
-	.gridcol .col-md-9 {
+	.grid .col-md-9 {
 		width: 37.5%;
 	}
-	.gridcol .col-md-10 {
+	.grid .col-md-10 {
 		width: 41.666%;
 	}
-	.gridcol .col-md-11 {
+	.grid .col-md-11 {
 		width: 45.8333%;
 	}
-	.gridcol .col-md-12 {
+	.grid .col-md-12 {
 		width: 50%;
 	}
-	.gridcol .col-md-13 {
+	.grid .col-md-13 {
 		width: 54.1666%;
 	}
-	.gridcol .col-md-14 {
+	.grid .col-md-14 {
 		width: 58.333%;
 	}
-	.gridcol .col-md-15 {
+	.grid .col-md-15 {
 		width: 62.5%;
 	}
-	.gridcol .col-md-16 {
+	.grid .col-md-16 {
 		width: 66.666%;
 	}
-	.gridcol .col-md-17 {
+	.grid .col-md-17 {
 		width: 70.8333%;
 	}
-	.gridcol .col-md-18 {
+	.grid .col-md-18 {
 		width: 75%;
 	}
-	.gridcol .col-md-19 {
+	.grid .col-md-19 {
 		width: 79.1666%;
 	}
-	.gridcol .col-md-20 {
+	.grid .col-md-20 {
 		width: 83.333%;
 		padding: 0 .5%;
 	}
-	.gridcol .col-md-21 {
+	.grid .col-md-21 {
 		width: 87.5%;
 	}
-	.gridcol .col-md-22 {
+	.grid .col-md-22 {
 		width: 91.666%;
-		padding: 0 .5%;
 	}
-	.gridcol .col-md-23 {
+	.grid .col-md-23 {
 		width: 95.8333%;
 	}
-	.gridcol .col-md-24 {
+	.grid .col-md-24 {
 		width: 100%;
 	}
 }
 @media screen and (max-width: 700px) {
-	#container .hide-700 {
+	.hide-700 {
 		display: none;
 	}
-	#container .show-700 {
+	.show-700 {
 		display: block;
 	}
-	.gridcol.break-700.edges {
+	.grid.break-700.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	#container .gridcol.break-700 [class*="col-"] {
+	.grid.break-700 [class*="col-"] {
 		float: none;
 		clear: both;
 		width: auto;
@@ -281,17 +278,17 @@
 	}
 }
 @media screen and (max-width: 600px) {
-	#container .hide-600 {
+	.hide-600 {
 		display: none;
 	}
-	#container .show-600 {
+	.show-600 {
 		display: block;
 	}
-	.gridcol.break-600.edges {
+	.grid.break-600.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.gridcol.break-600 [class*="col-"]{
+	.grid.break-600 [class*="col-"]{
 		float: none;
 		clear: both;
 		width: auto;
@@ -302,14 +299,14 @@
 	.hide-500 {
 		display: none;
 	}
-	#container .show-500 {
+	.show-500 {
 		display: block;
 	}
-	.gridcol.break-500.edges {
+	.grid.break-500.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.gridcol.break-500 [class*="col-"]{
+	.grid.break-500 [class*="col-"]{
 		float: none;
 		clear: both;
 		width: auto;
@@ -317,76 +314,76 @@
 	}
 }
 @media screen and (max-width: 480px) {
-	.gridcol .col-sm-1 {
+	.grid .col-sm-1 {
 		width: 4.1666%;
 	}
-	.gridcol .col-sm-2 {
+	.grid .col-sm-2 {
 		width: 8.3%;
 	}
-	.gridcol .col-sm-3 {
+	.grid .col-sm-3 {
 		width: 12.5%;
 	}
-	.gridcol .col-sm-4 {
+	.grid .col-sm-4 {
 		width: 16.666%;
 	}
-	.gridcol .col-sm-5 {
+	.grid .col-sm-5 {
 		width: 20.8333%;
 	}
-	.gridcol .col-sm-6 {
+	.grid .col-sm-6 {
 		width: 25%;
 	}
-	.gridcol .col-sm-7 {
+	.grid .col-sm-7 {
 		width: 29.1666%;
 	}
-	.gridcol .col-sm-8 {
+	.grid .col-sm-8 {
 		width: 33.333%;
 	}
-	.gridcol .col-sm-9 {
+	.grid .col-sm-9 {
 		width: 37.5%;
 	}
-	.gridcol .col-sm-10 {
+	.grid .col-sm-10 {
 		width: 41.666%;
 	}
-	.gridcol .col-sm-11 {
+	.grid .col-sm-11 {
 		width: 45.8333%;
 	}
-	.gridcol .col-sm-12 {
+	.grid .col-sm-12 {
 		width: 50%;
 	}
-	.gridcol .col-sm-13 {
+	.grid .col-sm-13 {
 		width: 54.1666%;
 	}
-	.gridcol .col-sm-14 {
+	.grid .col-sm-14 {
 		width: 58.333%;
 	}
-	.gridcol .col-sm-15 {
+	.grid .col-sm-15 {
 		width: 62.5%;
 	}
-	.gridcol .col-sm-16 {
+	.grid .col-sm-16 {
 		width: 66.666%;
 	}
-	.gridcol .col-sm-17 {
+	.grid .col-sm-17 {
 		width: 70.8333%;
 	}
-	.gridcol .col-sm-18 {
+	.grid .col-sm-18 {
 		width: 75%;
 	}
-	.gridcol .col-sm-19 {
+	.grid .col-sm-19 {
 		width: 79.1666%;
 	}
-	.gridcol .col-sm-20 {
+	.grid .col-sm-20 {
 		width: 83.333%;
 	}
-	.gridcol .col-sm-21 {
+	.grid .col-sm-21 {
 		width: 87.5%;
 	}
-	.gridcol .col-sm-22 {
+	.grid .col-sm-22 {
 		width: 91.666%;
 	}
-	.gridcol .col-sm-23 {
+	.grid .col-sm-23 {
 		width: 95.8333%;
 	}
-	.gridcol .col-sm-24 {
+	.grid .col-sm-24 {
 		width: 100%;
 	}
 }
@@ -394,14 +391,14 @@
 	.hide-400 {
 		display: none;
 	}
-	#container .show-400 {
+	.show-400 {
 		display: block;
 	}
-	.gridcol.break-400.edges {
+	.grid.break-400.edges {
 		margin-left: 0;
 		margin-right: 0;
 	}
-	.gridcol.break-400 [class*="col-"]{
+	.grid.break-400 [class*="col-"]{
 		float: none;
 		clear: both;
 		width: auto;
