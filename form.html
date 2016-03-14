@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Sonic Web Framework</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" href="/src/css/reset.css" />
+        <link rel="stylesheet" href="/src/css/grid.css" />
+        <link rel="stylesheet" href="/src/css/form.css" />
+        <link rel="stylesheet" href="/css/docs.css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <!-- Add your site or application content here -->
+            <h1>Default form styles</h1>
+            <p>Use <code>.simple</code> class on the <code>&lt;form&gt;</code> element to add styles to all <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements.</p>
+            <form id="contactform" action="/inc/formmail.cfm" method="post" class="simple">
+            	<fieldset>
+            		<legend>Fieldset label</legend>
+            		<div class="fm-line">
+            			<label for="Name">Name:</label>
+            			<input name="Name" type="text" id="Name" class="input req validate" />
+            			<div class="fm-help">This is helpful text</div>
+            		</div>
+            	</fieldset>
+                	<fieldset>
+                		<legend>Inline fields</legend>
+                        <p>Use <code>.inline</code> class surrounding the <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> elements to show them on a single line.</p>
+                		<div class="inline fm-line">
+                			<label for="Name">Name:</label>
+                			<input name="Name" type="text" id="Name" class="input req validate" />
+                			<div class="fm-help">This is helpful text</div>
+                		</div>
+                		<div class="inline fm-line">
+                			<label for="Email">Email:</label>
+                			<input name="Email" type="text" id="Email" class="input" />
+                			<div class="fm-help"></div>
+                		</div>
+                	</fieldset>
+                        	<fieldset>
+                        		<legend>Inline form</legend>
+                                <p>Use <code>.inline</code> class on the <code>&lt;form&gt;</code> element or any wrapper <code>&lt;div&gt;</code> to show all field blocks on one line. Note that if the wrapper div is not wide enough, the form blocks will wrap to the next line.</p>
+                        		<div class="inline">
+                                    <div class="fm-line">
+                            			<label for="Name">Name:</label>
+                            			<input name="Name" type="text" id="Name" class="input req validate" />
+                            			<div class="fm-help"></div>
+                            		</div>
+                            		<div class="fm-line">
+                            			<label for="Email">Email:</label>
+                            			<input name="Email" type="text" id="Email" class="input" />
+                            			<div class="fm-help"></div>
+                            		</div>
+                                </div>
+                        	</fieldset>
+                            	<fieldset>
+                            		<legend>Radio and Checkbox fields</legend>
+                                    <p>Use the <code>.fm-radio</code> or <code>.fm-checkbox</code> class on the <code>.fm-line</code> tag.</p>
+                            		<div class="fm-radio fm-line fm-checkbox">
+                            			<label for="under21">I am under 21:</label>
+                            			<input name="under21" type="checkbox" id="under21" class="input" />
+                            			<div class="fm-help"></div>
+                            		</div>
+                                    <p>Change the order of the <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> tags to display the radio button or checkbox to the left of the <code>&lt;label&gt;</code>
+                            		<div class="fm-radio fm-line fm-radio">
+                            			<input name="agegroup" type="radio" id="agegroup" class="input" />
+                                			<label for="agegroup">I am under 20:</label>
+                            			<div class="fm-help"></div>
+                            		</div>
+                            		<div class="fm-radio fm-line fm-radio">
+                            			<input name="agegroup" type="radio" id="agegroup" class="input" />
+                                			<label for="agegroup">I am between 25 and 30:</label>
+                            			<div class="fm-help"></div>
+                            		</div>
+                            		<div class="fm-radio fm-line fm-radio">
+                            			<input name="agegroup" type="radio" id="agegroup" class="input" />
+                                			<label for="agegroup">I am over 30:</label>
+                            			<div class="fm-help"></div>
+                            		</div>
+                            	</fieldset>
+
+            	<div class="block fm-line fm-submit">
+            		<input name="submit" type="submit" />
+            	</div>
+            </form>
+
+        </div>
+
+        <script src="/src/js/main.js"></script>
+    </body>
+</html>

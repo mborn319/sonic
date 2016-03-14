@@ -1,0 +1,118 @@
+/*======================================================
+** 			|     form.simple styles       |  		  **
+======================================================== */
+/*bare minumum*/
+form.simple { overflow: visible; }
+.simple .fm-line {
+	margin-bottom: 1.2rem;
+}
+.simple label {
+	display:.fm-line;
+	clear: both;
+	float: left;
+	padding: 0;
+	color: #4444;
+}
+.simple .fm-help {
+    color: #888;
+}
+.simple input,
+.simple select,
+.simple textarea,
+.simple [role="select"] {
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #999;
+	padding: 7px;
+	color: #999;
+	width: 100%;
+	min-height: 37px;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.simple textarea {
+	min-height: 130px;
+	resize: vertical;
+}
+
+
+/*submit btns*/
+.simple input[type="image"] {
+	width: auto;
+	height: auto;
+	min-height: 0;
+	border: 0;
+	padding: 0;
+}
+.simple input[type="submit"] {
+	width: auto;
+}
+
+
+/*fieldset, legend stuff*/
+.simple fieldset {
+	margin: 1rem 0  1rem 2rem;
+	border: 0;
+}
+.simple legend {
+	margin: 1rem 0  1rem -2rem;
+	border-bottom: 4px solid #1CC6E5;
+	padding: 0 2rem .3em;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+/*validation and required fields*/
+.simple .required {
+	float: right;
+	color: #990000;
+}
+.simple .invalid input,
+.simple .invalid select,
+.simple .invalid textarea {
+	border-color: #A01B1B;
+}
+.simple .valid input,
+.simple .valid select,
+.simple .valid textarea {
+	border-color: #137F14;
+}
+.simple .fm-help .alert {
+	margin: .1em 0;
+}
+
+/*inline form blocks next to each other*/
+.simple.inline .fm-line,
+.simple .inline .fm-line {
+	display: inline-block;
+	vertical-align: middle;
+}
+/*inline form elements next to each within their respective block*/
+.simple .inline input,
+.simple .inline select,
+.simple .inline label,
+.simple .inline .required,
+.fm-radio .required,
+.simple .inline .fm-help {
+	width: auto;
+	clear: none;
+	float: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*radio and checkbox styles - always show inline!*/
+.fm-radio .required { padding-left: 5px; }
+
+.simple .fm-radio input,
+.simple .fm-radio select,
+.simple .fm-radio label  {
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	min-height: 0;
+	float: none;
+	clear: none;
+}
