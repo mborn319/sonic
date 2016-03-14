@@ -20,7 +20,7 @@
         <!-- Add your site or application content here -->
         <h1>Default form styles</h1>
         <p>Use <code>.simple</code> class on the <code>&lt;form&gt;</code> element to add styles to all <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code> elements.</p>
-        <form id="contactform" action="/inc/formmail.cfm" method="post" class="simple">
+        <form id="contactform" action="?" method="post" class="simple">
             <fieldset>
                 <legend>Fieldset label</legend>
                 <div class="fm-line">
@@ -68,21 +68,22 @@
                     <div class="fm-help"></div>
                 </div>
                 <p>Change the order of the <code>&lt;label&gt;</code> and <code>&lt;input&gt;</code> tags to display the radio button or checkbox to the left of the <code>&lt;label&gt;</code>
-                    <div class="fm-radio fm-line fm-radio">
-                        <input name="agegroup" type="radio" id="agegroup" class="input" />
-                        <label for="agegroup">I am under 20:</label>
-                        <div class="fm-help"></div>
-                    </div>
-                    <div class="fm-radio fm-line fm-radio">
-                        <input name="agegroup" type="radio" id="agegroup" class="input" />
-                        <label for="agegroup">I am between 25 and 30:</label>
-                        <div class="fm-help"></div>
-                    </div>
-                    <div class="fm-radio fm-line fm-radio">
-                        <input name="agegroup" type="radio" id="agegroup" class="input" />
-                        <label for="agegroup">I am over 30:</label>
-                        <div class="fm-help"></div>
-                    </div>
+                </p>
+                <div class="fm-radio fm-line fm-radio">
+                    <input name="agegroup" type="radio" id="agegroup" class="input" />
+                    <label for="agegroup">I am under 20:</label>
+                    <div class="fm-help"></div>
+                </div>
+                <div class="fm-radio fm-line fm-radio">
+                    <input name="agegroup" type="radio" id="agegroup" class="input" />
+                    <label for="agegroup">I am between 25 and 30:</label>
+                    <div class="fm-help"></div>
+                </div>
+                <div class="fm-radio fm-line fm-radio">
+                    <input name="agegroup" type="radio" id="agegroup" class="input" />
+                    <label for="agegroup">I am over 30:</label>
+                    <div class="fm-help"></div>
+                </div>
             </fieldset>
 
             <div class="block fm-line fm-submit">
