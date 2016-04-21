@@ -106,13 +106,22 @@ form.simple { overflow: visible; }
 /*radio and checkbox styles - always show inline!*/
 .fm-radio .required { padding-left: 5px; }
 
-.simple .fm-radio input,
-.simple .fm-radio select,
-.simple .fm-radio label  {
-	width: auto;
-	display: inline-block;
-	vertical-align: middle;
-	min-height: 0;
-	float: none;
-	clear: none;
+.simple .fm-radio input, 
+.simple .fm-radio select, 
+.simple .fm-radio label,
+.simple .fm-checkbox input, 
+.simple .fm-checkbox select, 
+.simple .fm-checkbox label,
+.simple input[type="radio"],
+.simple input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  min-height: 0;
+  float: none;
+  clear: none;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
