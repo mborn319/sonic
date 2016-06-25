@@ -23,3 +23,24 @@ h5 { font-size: 1.2rem; }
 img,iframe {
   max-width: 100%;
 }
+
+/* Button styles */
+.btn-primary,.btn-secondary {
+  border-radius: 0;
+  text-decoration: none;
+  border: 2px solid currentColor;
+  display: inline-block;
+  padding: .4em .7em;
+  font-size: 1em;
+}
+.btn-small {
+  border-width: 1px;
+  padding: .3em .4em;
+  font-size: .9em;
+}
+.btn-primary {
+  color: #1366b0;
+}
+.btn-secondary {
+  color: #5A5A5A;
+}
